@@ -1,0 +1,99 @@
+@charset "UTF-8";
+/*********** esse css pode ser usado em vários projetos ***********/
+/****** resetando css *****/
+html, body, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary, time, mark, audio, video, div {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  outline: 0 !important; 
+  -webkit-box-sizing: border-box; 
+          box-sizing: border-box;
+}
+
+/****** alinhando um elemento na vertical no centro ******/
+.alinharV {
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  text-align: center; }
+
+/***** mudar imagem do cursor isso ainda n├úo t├í funcionando *******/
+/*@mixin cursorImg($caminhoImgCursor){
+	cursor: url($caminhoImgCursor), default;
+}
+
+.cursorImg{ /*assim que se usa o @mixin cursorImg*/
+	/*@include cursorImg(cursorPersonalizado.png);
+}*/
+/***** desabilitando seleção de texto e arraste de de imagens *****/
+img, span, text{
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  user-drag: none;
+}
+/***** desabilitar sele├º├úo de elementos *******/
+.desabilitaSelecao {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+/**** desabilitar arrastar imagens e elementos ******/
+.desabilitaArraste {
+  -webkit-user-drag: none;
+  user-drag: none; }
+
+/**** alinha elemento no centro horizontal ******/
+/**** alinha elemento no centro Vertical ******/
+.elementoAlinhado {
+  /*forma de usar alinhaElementoH e alinhaElementoV*/
+  position: absolute;
+  width: 500px;
+  left: 50%;
+  margin-left: -250px;
+  position: absolute;
+  height: 500px;
+  top: 50%;
+  margin-top: -250px;
+  background: black; }
+
+/***** usando o transforme pra qualquer coisa ******/
+/*.testeTransform{  usando o transform 
+	@include useTransf(rotate(7deg));
+}*/
+/**** usando font-face ******/
+@font-face {
+  font-family: 'MyWebFont';
+  src: url("webfont.eot");
+  src: url("webfont.eot?#iefix") format("embedded-opentype"), url("webfont.woff2") format("woff2"), url("webfont.woff") format("woff"), url("webfont.ttf") format("truetype"), url("webfont.svg#svgFontName") format("svg"); }
+/*body { usando font-face
+  font-family: 'MyWebFont', Fallback, sans-serif;
+}*/
+/***** anima├º├úo em css *****/
+.element {
+  -webkit-animation: KEYFRAME-NAME 5s infinite;
+  -moz-animation: KEYFRAME-NAME 5s infinite;
+  -o-animation: KEYFRAME-NAME 5s infinite;
+  animation: KEYFRAME-NAME 5s infinite; }
+
+@-webkit-keyframes KEYFRAME-NAME {}
+@-moz-keyframes KEYFRAME-NAME {}
+@-o-keyframes KEYFRAME-NAME {}
+/**** media queries *****/
+@media screen and (max-width: 480px) {
+  /* min-width: 480px */ }
+/*****  @extend .nomeDaclasse; para usar uma classe em outro elemento css *****/
+/****** http://sass-lang.com/guide *******/
+
+/*# sourceMappingURL=cssUtil.css.map */
